@@ -1,0 +1,46 @@
+Terminal 1 — PulseOps
+
+python -m uvicorn main:app --reload
+
+
+
+Terminal 2 — Demo service
+
+python -m uvicorn demo_service:app --port 8001 --reload
+
+
+
+Terminal 3 — Monitor
+
+python monitor.py
+
+VENV. 
+.\venv\Scripts\Activate.ps1
+
+
+
+
+
+################################################################################################################
+
+Demo Service
+     ↓
+Monitor checks /health
+     ↓
+Service goes DOWN
+     ↓
+Monitor detects failure
+     ↓
+Incident automatically created
+     ↓
+Severity = HIGH
+     ↓
+Incident timestamp recorded
+     ↓
+Engineer starts investigation
+     ↓
+investigation_state = investigating
+     ↓
+Engineer resolves incident
+     ↓
+status = resolved
