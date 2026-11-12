@@ -1,9 +1,8 @@
-"""create incidents table
+"""Create the incidents table.
 
 Revision ID: 5110c5d0fae5
 Revises:
 Create Date: 2026-09-28 19:15:31.986930
-
 """
 
 from typing import Sequence, Union

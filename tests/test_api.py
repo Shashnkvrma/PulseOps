@@ -1,3 +1,4 @@
+
 from fastapi.testclient import TestClient
 
 from app.main import app
@@ -32,7 +33,7 @@ def test_create_incident():
         json=payload
     )
 
-    assert response.status_code == 200
+    assert response.status_code == 201
 
     data = response.json()
 
@@ -77,7 +78,7 @@ def test_resolve_incident():
         json=payload
     )
 
-    assert create_response.status_code == 200
+    assert create_response.status_code == 201
 
     incident_id = create_response.json()["id"]
 

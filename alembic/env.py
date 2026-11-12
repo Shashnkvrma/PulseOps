@@ -1,3 +1,6 @@
+# Connects Alembic to SQLAlchemy configuration
+# and tells it which models to track.
+
 import os
 from logging.config import fileConfig
 
